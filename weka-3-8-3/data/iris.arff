@@ -1,0 +1,7 @@
+@RELATION Open1
+
+@ATTRIBUTE tweets	STRING
+@ATTRIBUTE O 	{Low,Medium,High}
+
+@DATA
+
