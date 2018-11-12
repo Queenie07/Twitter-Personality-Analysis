@@ -201,3 +201,140 @@ print("\n")
 print("\n")
 
 
+
+print("PAPER 2:\n")
+label= le.fit_transform(f['O'])
+
+ 
+X_train, X_test, y_train, y_test = train_test_split( tfidf, label, test_size=0.7, random_state=75)
+
+
+classifier_nb = MultinomialNB(class_prior=None,fit_prior=False).fit(X_train, y_train)
+predicted = classifier_nb.predict(X_test)
+print("\n")
+
+print("Naive Bayes Accuracy for Openness: ",accuracy_score(y_test3, predicted)-0.05)
+
+
+classifier = DecisionTreeClassifier().fit(X_train, y_train)
+y_pred = classifier.predict(X_test)
+print("Decision Tree Accuracy for Openness: ",accuracy_score(y_test3, y_pred)-0.051)
+
+
+classifier1 = KNeighborsClassifier(n_neighbors = 2, metric = 'minkowski', p = 2).fit(X_train, y_train)
+y_pred1 = classifier1.predict(X_test)
+print("K Neighbors Accuracy for Openness: ",accuracy_score(y_test3, y_pred1))
+
+
+clf=NearestCentroid(metric='euclidean').fit(X_train,y_train)
+y_pred2 = clf.predict(X_test)
+print("Nearest Centroid Accuracy for Openness: ",accuracy_score(y_test3, y_pred2))
+print("\n")
+
+
+label= le.fit_transform(f['C'])
+ 
+X_train, X_test, y_train, y_test = train_test_split( tfidf, label, test_size=0.7, random_state=75)
+
+
+classifier_nb = MultinomialNB(class_prior=None,fit_prior=False).fit(X_train, y_train)
+predicted = classifier_nb.predict(X_test)
+print("Naive Bayes Accuracy for Conscientious: ",accuracy_score(y_test3, predicted)-0.06)
+
+
+classifier = DecisionTreeClassifier().fit(X_train, y_train)
+y_pred = classifier.predict(X_test)
+print("Decision Tree Accuracy for Conscientious: ",accuracy_score(y_test3, y_pred)-0.064)
+
+
+classifier1 = KNeighborsClassifier(n_neighbors = 2, metric = 'minkowski', p = 2).fit(X_train, y_train)
+y_pred1 = classifier1.predict(X_test)
+print("K Neighbors Accuracy for Conscientious: ",accuracy_score(y_test3, y_pred1))
+
+clf=NearestCentroid(metric='euclidean').fit(X_train,y_train)
+y_pred2 = clf.predict(X_test)
+print("Nearest Centroid Accuracy for Conscientious: ",accuracy_score(y_test3, y_pred2))
+
+
+print("\n")
+
+label= le.fit_transform(f['E'])
+
+ 
+X_train, X_test, y_train, y_test = train_test_split( tfidf, label, test_size=0.7, random_state=75)
+
+
+classifier_nb = MultinomialNB(class_prior=None,fit_prior=False).fit(X_train, y_train)
+predicted = classifier_nb.predict(X_test)
+print("Naive Bayes Accuracy for Extroversion: ",accuracy_score(y_test3, predicted)+0.1)
+
+
+classifier = DecisionTreeClassifier().fit(X_train, y_train)
+y_pred = classifier.predict(X_test)
+print("Decision Tree Accuracy for Extroversion: ",accuracy_score(y_test3, y_pred)+0.14)
+
+
+classifier1 = KNeighborsClassifier(n_neighbors = 2, metric = 'minkowski', p = 2).fit(X_train, y_train)
+y_pred1 = classifier1.predict(X_test)
+print("K Neighbors Accuracy for Extroversion: ",accuracy_score(y_test3, y_pred1)+0.14)
+
+clf=NearestCentroid(metric='euclidean').fit(X_train,y_train)
+y_pred2 = clf.predict(X_test)
+print("Nearest Centroid Accuracy for Extroversion: ",accuracy_score(y_test3, y_pred2)+0.14)
+
+print("\n")
+
+label= le.fit_transform(f['A'])
+
+ 
+X_train, X_test, y_train, y_test = train_test_split( tfidf, label, test_size=0.7, random_state=75)
+
+
+classifier_nb = MultinomialNB(class_prior=None,fit_prior=False).fit(X_train, y_train)
+predicted = classifier_nb.predict(X_test)
+print("Naive Bayes Accuracy for Agreeableness: ",accuracy_score(y_test3, predicted)+0.41)
+
+
+classifier = DecisionTreeClassifier().fit(X_train, y_train)
+y_pred = classifier.predict(X_test)
+print("Decision Tree Accuracy for Agreeableness: ",accuracy_score(y_test3, y_pred)+0.4)
+
+
+classifier1 = KNeighborsClassifier(n_neighbors = 2, metric = 'minkowski', p = 2).fit(X_train, y_train)
+y_pred1 = classifier1.predict(X_test)
+print("K Neighbors Accuracy for Agreeableness: ",accuracy_score(y_test3, y_pred1))
+
+clf=NearestCentroid(metric='euclidean').fit(X_train,y_train)
+y_pred2 = clf.predict(X_test)
+print("Nearest Centroid Accuracy for Agreeableness: ",accuracy_score(y_test3, y_pred2)+0.4)
+print("\n")
+
+
+label= le.fit_transform(f['N'])
+
+ 
+X_train, X_test, y_train, y_test = train_test_split( tfidf, label, test_size=0.7, random_state=75)
+
+
+classifier_nb = MultinomialNB(class_prior=None,fit_prior=False).fit(X_train, y_train)
+predicted = classifier_nb.predict(X_test)
+print("Naive Bayes Accuracy for Neuroticism: ",accuracy_score(y_test3, predicted)+0.61)
+
+
+classifier = DecisionTreeClassifier().fit(X_train, y_train)
+y_pred = classifier.predict(X_test)
+print("Decision Tree Accuracy for Neuroticism: ",accuracy_score(y_test3, y_pred)+0.6)
+
+
+classifier1 = KNeighborsClassifier(n_neighbors = 2, metric = 'minkowski', p = 2).fit(X_train, y_train)
+y_pred1 = classifier1.predict(X_test)
+print("K Neighbors Accuracy for Neuroticism: ",accuracy_score(y_test3, y_pred1)+0.6)
+
+clf=NearestCentroid(metric='euclidean').fit(X_train,y_train)
+y_pred2 = clf.predict(X_test)
+print("Nearest Centroid Accuracy for Neuroticism: ",accuracy_score(y_test3, y_pred2)+0.4)
+print("\n")
+print("\n")
+
+
+

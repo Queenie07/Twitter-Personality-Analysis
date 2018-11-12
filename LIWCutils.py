@@ -1,18 +1,4 @@
-# Contains the LIWCdict class
-# Yang Xu
-# 10/24/2016
-
-from __future__ import print_function
-from __future__ import absolute_import
-from __future__ import division
-
-import fnmatch
-import pickle
 import re
-import sys
-import itertools
-import collections
-
 
 # the LIWCdict class
 class LIWCdict(object):
@@ -315,3 +301,5 @@ class LIWCdict(object):
             return sorted(self._marker2code.keys(), reverse=True)
         else:
             return list(self._marker2code.keys())
+
+
